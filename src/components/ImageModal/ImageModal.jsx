@@ -1,9 +1,18 @@
-import css from './ImageModal.module.css';
+import React from "react";
+import Modal from "react-modal";
+import css from "./ImageModal.module.css";
 
-export default function ImageModal() {
+Modal.setAppElement("#root"); // Set the root of your application as the appElement
+
+export default function ImageModal({ isOpen, onRequestClose, imageUrl }) {
   return (
-    <div className={css.container}>
-      <div>ImageModal</div>
-    </div>
+    <Modal
+      isOpen={isOpen}
+      onRequestClose={onRequestClose}
+      className={css.modal}
+      overlayClassName={css.overlay}
+    >
+      <img src={imageUrl} alt="Modal Content" />
+    </Modal>
   );
 }

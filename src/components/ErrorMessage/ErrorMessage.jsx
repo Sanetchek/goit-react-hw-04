@@ -1,9 +1,9 @@
-import css from './ErrorMessage.module.css';
+import css from "./ErrorMessage.module.css";
 
 export default function ErrorMessage() {
   return (
     <div className={css.container}>
-      <div>ErrorMessage</div>
+      <div className={css.message}>Something went wrong, try again!</div>
     </div>
   );
 }
